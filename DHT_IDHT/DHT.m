@@ -8,6 +8,7 @@ N = 10;
 J = 7;
 
 [g,c0] = DyadicStep(linspaceN,N,f);
+
 current_c = c0; 
 d_store = cell(1, J); % Stores d vectors
 for j = 1:J 
@@ -36,7 +37,13 @@ end
 
 % Plotting
 figure;
-plot(x, g);
+% subplot(3,1,1);
+% plot(x, g);
+% 
+% subplot(3,1,2)
+% plot(linspace(0,1,length(c1_idht)),HaarScalingFunctions(linspaceN,N)*c1_idht);
+
+%subplot(3,1,3)
 abs_w = abs(w);
 loglog(abs_w);
 xlim([10^0 10^3]);
